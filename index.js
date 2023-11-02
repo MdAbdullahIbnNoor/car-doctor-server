@@ -28,7 +28,7 @@ const client = new MongoClient(uri, {
 
 // middlewarews
 const logger = async (req, res, next) => {
-    console.log('called', req.hostname, req.originalUrl);
+    console.log('called', req.hostname, req.originalUrl, req.method);
     next();
 }
 
